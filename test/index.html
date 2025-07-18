@@ -4,11 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        var initialScale = document.documentElement.clientWidth / 750;
-        document.querySelector('meta[name=viewport]').content = `width=device-width, initial-scale=${initialScale}, user-scalable=no`;
-    </script>
-    <title>test1</title>
+    <title>test</title>
     <style>
         * {
             margin: 0;
@@ -29,82 +25,14 @@
             overflow: hidden;
         }
     </style>
-    <script src="//yun.duiba.com.cn/js-libs/vConsole/3.3.4/vconsole.min.js"></script>
 </head>
 
 <body>
     <div id="root">
-        <a href="https://www.baidu.com">test1</a>
+        test
     </div>
 </body>
 <script>
-    var vConsole = new VConsole();
-    console.log('document.documentElement.clientWidth', document.documentElement.clientWidth);
-    console.log('window.innerWidth', window.innerWidth);
-
-    /* history 退回该页面触发 存疑 */
-    window.history.pushState({ title: "login", url: '#' }, "login");
-    console.log('window.history', window.history);
-    if ('onpopstate' in window) {
-        console.log('onpopstate 存在');
-        window.onpopstate = function (event) {
-            console.log('onpopstate', event)
-            if (event.state) {
-                var state = event.state.title;
-                switch (state) {
-                    case "login":
-                        break;
-                    case "join":
-                        break;
-                }
-            }
-        };
-    } else {
-        console.log('onpopstate 不存在');
-    }
-
-    /* 从别的页面跳转回来触发 */
-    if ('onpageshow' in window) {
-        console.log('onpageshow 存在');
-        window.onpageshow = (e) => {
-            console.log('onpageshow', e);
-        }
-    } else {
-        console.log('onpageshow 不存在');
-    }
-
-    /* 跳转到别的页面触发 */
-    if ('onpagehide' in window) {
-        console.log('onpagehide 存在');
-        window.onpagehide = (e) => {
-            console.log('onpagehide', e);
-        }
-    } else {
-        console.log('onpagehide 不存在');
-    }
-
-    /* 这个能监听切后台和页签切换 */
-    document.addEventListener("visibilitychange", function (e) {
-        console.log('visibilitychange', e);
-        console.log('document.visibilityState', document.visibilityState);
-    })
-
-    /* 监听页面关闭 */
-    if ('onbeforeunload' in window) {
-        console.log('onbeforeunload 存在');
-        window.addEventListener("beforeunload", function (e) {
-            // setTimeout(()=>{
-            //     window.location.href = 'https://www.baidu.com'
-            // },2000)
-            var confirmationMessage = "\o/";
-            (e || window.event).returnValue = confirmationMessage;
-            return confirmationMessage;
-        });
-    } else {
-        console.log('onbeforeunload 不存在');
-    }
-
-
 </script>
 
 </html>
