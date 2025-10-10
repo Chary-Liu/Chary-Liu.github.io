@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/><link rel="manifest" href="/pwa-copy/pwa/manifest.json"/><link rel="shortcut icon" type="image/icon" href="/pwa-copy/favicon.ico"/><title>web-template</title><script>// 按条件引入eruda.js调试工具
+      (function (url) {
+        if (!location.href.includes('eruda')) return;
+        var script = document.createElement('script');
+        script.src = url;
+        document.head.appendChild(script);
+        script.onload = function () {
+          window.eruda && window.eruda.init();
+        };
+      })('/pwa-copy/eruda.js');
+      // serviceWorker注册
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/pwa-copy/sw.js', { scope: '/pwa-copy/' });
+      }</script><script src="/pwa-copy/preset.js"></script><script defer="defer" src="/pwa-copy/js/runtime_1.0.0.js"></script><script defer="defer" src="/pwa-copy/js/vendors_1.0.0.js"></script><script defer="defer" src="/pwa-copy/js/index_1.0.0.js"></script><link href="/pwa-copy/style/index_1.0.0.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>

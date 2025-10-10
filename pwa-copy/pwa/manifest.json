@@ -1,0 +1,36 @@
+{
+  "name": "Test App",
+  "short_name": "Test",
+  "description": "Test App description",
+  "start_url": "/",
+  "background_color": "gray",
+  "theme_color": "purple",
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icon512.png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-pc.png",
+      "sizes": "683x683",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "pc show"
+    },
+    {
+      "src": "screenshot-mobile.jpg",
+      "sizes": "683x683",
+      "type": "image/jpg",
+      "form_factor": "narrow",
+      "label": "mobile show"
+    }
+  ]
+}
