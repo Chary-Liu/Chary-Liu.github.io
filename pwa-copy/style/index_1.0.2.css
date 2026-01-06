@@ -8,23 +8,63 @@
   top: 0px;
   opacity: 1;
   background: #eff4fa;
+  display: flex;
+  flex-direction: column;
 }
 .copy_box .text_box {
   width: 100%;
   border: none;
   outline: none;
 }
-.copy_box .handle-box {
+.copy_box .tip_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.copy_box .handle_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+.copy_box .handle_box input {
+  width: 113px;
+  height: 113px;
+  font-size: 32px;
+  margin-bottom: 13px;
+}
+.copy_box .data_list_box {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.copy_box .data_list_box .data_item {
+  width: 100%;
+  margin-bottom: 8px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.copy_box .data_list_box .data_item.cur {
+  border: 2px solid red;
+}
+.copy_box .data_list_box .data_item .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 16px;
-  font-weight: bold;
 }
-.copy_box .handle-box input {
-  width: 100px;
-  height: 100px;
-  font-size: 20px;
+.copy_box .data_list_box .data_item .info .btn {
+  color: #0000ff;
+  cursor: pointer;
 }
 
 * {
