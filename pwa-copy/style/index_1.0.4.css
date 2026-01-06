@@ -28,13 +28,13 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  font-weight: bold;
 }
 .copy_box .handle_box input {
-  width: 113px;
-  height: 113px;
-  font-size: 32px;
+  width: 168px;
+  height: 168px;
+  font-size: 38px;
   margin-bottom: 13px;
+  font-weight: normal;
 }
 .copy_box .data_list_box {
   position: relative;
